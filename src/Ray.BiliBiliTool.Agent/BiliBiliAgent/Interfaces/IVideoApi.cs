@@ -130,6 +130,15 @@ public interface IVideoWithoutCookieApi : IVideoApi
     [Header("Referer", "https://www.bilibili.com/")]
     [Header("Origin", "https://www.bilibili.com")]
     [Header("dnt", "1")]
+    [Header("Accept", "application/json, text/plain, */*")]
+    [Header("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6")]
+    [Header("sec-ch-ua", "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Microsoft Edge\";v=\"140\"")]
+    [Header("sec-ch-ua-mobile", "?0")]
+    [Header("sec-ch-ua-platform", "\"Windows\"")]
+    [Header("sec-fetch-dest", "empty")]
+    [Header("sec-fetch-mode", "cors")]
+    [Header("sec-fetch-site", "same-site")]
+    [Header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0")]
     [HttpGet("/x/web-interface/ranking/v2?rid=0&type=all")]
     Task<BiliApiResponse<Ranking>> GetRegionRankingVideosV2();
 }
