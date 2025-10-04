@@ -128,6 +128,7 @@ public static class ServiceCollectionExtension
             })
             .ConfigureHttpClient(config)
             .AddHttpMessageHandler<IntervalDelegatingHandler>()
+            .AddHttpMessageHandler<BrowserHeadersDelegatingHandler>()
             .AddPolicyHandler(GetRetryPolicy());
 
         if (!ignorWrid)
